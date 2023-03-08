@@ -1,0 +1,6 @@
+version: '2'
+services:
+  prusaslicer:
+    build: .
+    environment:
+      DISPLAY: 172.17.0.1:1
