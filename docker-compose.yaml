@@ -3,4 +3,6 @@ services:
   prusaslicer:
     build: .
     environment:
-      DISPLAY: 172.17.0.1:1
+      DISPLAY: :1
+    volumes:
+      - /data/data/com.termux/files/usr/tmp/.X11-unix:/tmp/.X11-unix:rw
