@@ -27,10 +27,6 @@ RUN apt-get update && apt-get install -y \
   && apt-get autoremove -y \
   && apt-get autoclean
 
-RUN wget --no-check-certificate https://github.com/prusa3d/PrusaSlicer/releases/download/version_2.5.0/PrusaSlicer-2.5.0+linux-aarch64-GTK3-202209071828.tar.bz2 
-
-RUN tar -xf PrusaSlicer-2.5.0+linux-aarch64-GTK3-202209071828.tar.bz2
-
 RUN sed -i \
 	-e 's/^# \(cs_CZ\.UTF-8.*\)/\1/' \
 	-e 's/^# \(de_DE\.UTF-8.*\)/\1/' \
